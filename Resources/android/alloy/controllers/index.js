@@ -12,67 +12,23 @@ function Controller() {
         id: "index"
     });
     $.__views.index && $.addTopLevelView($.__views.index);
-    var __alloyId0 = {};
-    Alloy.createController("listtab", {
-        __itemTemplate: __alloyId0
+    $.__views.__alloyId0 = Ti.UI.Android.createSearchView({
+        ns: Ti.UI.Android,
+        id: "__alloyId0"
     });
-    var __alloyId5 = [];
-    var __alloyId6 = {
-        type: "Ti.UI.ImageView",
-        bindId: "leftimage",
-        properties: {
-            bindId: "leftimage"
-        }
-    };
-    __alloyId5.push(__alloyId6);
-    var __alloyId7 = {
-        type: "Ti.UI.Label",
-        bindId: "heading",
-        properties: {
-            width: Ti.UI.SIZE,
-            height: Ti.UI.SIZE,
-            color: "#000",
-            font: {
-                fontSize: 20,
-                fontFamily: "Helvetica Neue"
-            },
-            textAlign: "center",
-            bindId: "heading"
-        }
-    };
-    __alloyId5.push(__alloyId7);
-    var __alloyId8 = {
-        type: "Ti.UI.Label",
-        bindId: "subheading",
-        properties: {
-            width: Ti.UI.SIZE,
-            height: Ti.UI.SIZE,
-            color: "#000",
-            font: {
-                fontSize: 20,
-                fontFamily: "Helvetica Neue"
-            },
-            textAlign: "center",
-            bindId: "subheading"
-        }
-    };
-    __alloyId5.push(__alloyId8);
-    var __alloyId4 = {
-        properties: {
-            name: "even",
-            height: "60"
-        },
-        childTemplates: __alloyId5
-    };
-    __alloyId0["even"] = __alloyId4;
+    var __alloyId2 = {};
+    Alloy.createController("listtab", {
+        __itemTemplate: __alloyId2
+    });
     $.__views.section = Ti.UI.createListSection({
         id: "section"
     });
-    var __alloyId10 = [];
-    __alloyId10.push($.__views.section);
+    var __alloyId6 = [];
+    __alloyId6.push($.__views.section);
     $.__views.list = Ti.UI.createListView({
-        sections: __alloyId10,
-        templates: __alloyId0,
+        sections: __alloyId6,
+        templates: __alloyId2,
+        searchView: $.__views.__alloyId0,
         id: "list",
         defaultItemTemplate: "odd"
     });
@@ -80,14 +36,15 @@ function Controller() {
     exports.destroy = function() {};
     _.extend($, $.__views);
     var data = [];
-    for (var i = 0; 7 > i; i++) data.push({
+    for (var i = 0; 20 > i; i++) data.push({
         temlate: "odd",
         heading: {
-            text: "iam a head"
+            text: "iam a head " + i
         },
         subheading: {
-            text: "i am a subhead"
-        }
+            text: "i am a subhead " + i
+        },
+        searchableText: "am a head " + i
     });
     $.section.setItems(data);
     $.index.open();

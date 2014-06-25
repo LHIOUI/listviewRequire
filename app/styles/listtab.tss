@@ -1,11 +1,5 @@
-"#leftimage": {
-	left: 6,
-	top: 6,
-	width: 48,
-	height: 48
-}
 "Label":{
-	left: 60,
+	left: 10,
 	color: 'black'
 }
 "#heading": {
@@ -19,10 +13,4 @@
 }
 "Window": {
 	backgroundColor: 'white'
-}
-"#oddrows": {
-	height: 100 /* illustration only, won't override the XML */
-}
-"Tab[platform=ios]": {
-	 icon: "KS_nav_views.png"
 }

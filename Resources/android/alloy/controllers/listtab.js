@@ -6,12 +6,12 @@ function Controller() {
     var __itemTemplate = arguments[0] ? arguments[0]["__itemTemplate"] : null;
     var $ = this;
     var exports = {};
-    var __alloyId11 = [];
-    var __alloyId12 = {
+    var __alloyId7 = [];
+    var __alloyId8 = {
         type: "Ti.UI.Label",
         bindId: "heading",
         properties: {
-            left: 60,
+            left: 10,
             color: "black",
             top: 5,
             font: {
@@ -20,29 +20,28 @@ function Controller() {
             bindId: "heading"
         }
     };
-    __alloyId11.push(__alloyId12);
-    var __alloyId13 = {
+    __alloyId7.push(__alloyId8);
+    var __alloyId9 = {
         type: "Ti.UI.Label",
         bindId: "subheading",
         properties: {
-            left: 60,
+            left: 10,
             color: "black",
             top: 25,
             bindId: "subheading"
         }
     };
-    __alloyId11.push(__alloyId13);
-    $.__views.oddrows = {
+    __alloyId7.push(__alloyId9);
+    $.__views.listtab = {
         properties: {
-            height: "60",
             name: "odd",
-            id: "oddrows",
-            accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_CHECKMARK
+            height: "60",
+            id: "listtab"
         },
-        childTemplates: __alloyId11
+        childTemplates: __alloyId7
     };
-    __itemTemplate["odd"] = $.__views.oddrows;
-    $.__views.oddrows && $.addTopLevelView($.__views.oddrows);
+    __itemTemplate["odd"] = $.__views.listtab;
+    $.__views.listtab && $.addTopLevelView($.__views.listtab);
     exports.destroy = function() {};
     _.extend($, $.__views);
     _.extend($, exports);

@@ -3,11 +3,6 @@
 		<ListView id="list" defaultItemTemplate="odd">
 			<Templates>
 				<Require src="listtab"/>
-				<ItemTemplate name="even" height="60">
-					<ImageView bindId="leftimage" id="leftimage"/>
-					<Label bindId="heading" id="heading"/>
-					<Label bindId="subheading" id="subheading"/>
-				</ItemTemplate>
 			</Templates>
 			<ListSection id="section"></ListSection>
 		</ListView>
