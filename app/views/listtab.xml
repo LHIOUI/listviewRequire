@@ -1,0 +1,9 @@
+     <ListView id="listeFichiers" height="100" headerTitle="" defaultItemTemplate='ligneFichier'>
+      <Templates>
+       <Require src="ligneFichier"/>
+      </Templates>
+       <ListSection headerTitle="Title">
+         <ListItem typeDonnee:image="yourimage.png" nomFichier:text="FileName" supprimer:image="supprimer.png" />
+       </ListSection>
+     </ListView>
+
